@@ -1,2 +1,2 @@
-# SB-Pwa
-Basic Template Pwa
+# SB-Pwa 
+[Accès à la DEMO](https://lab.salim.link/sb-pwa)  

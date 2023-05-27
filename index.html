@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512x512.png">
+  <title>Ma progressive web app</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+    }
+
+    .image {
+      width: 80%;
+      height: auto;
+    }
+
+    .video {
+      width: 80%;
+      height: auto;
+    }
+
+    .text {
+      width: 80%;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    .form {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form input, .form button {
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .form button {
+      background-color: #0078d4;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" alt="Image" class="image">
+    <video src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" controls class="video"></video>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis leo quis nisi consequat fringilla. Donec vitae augue ut nisl tincidunt aliquet. Morbi quis lorem vitae leo sagittis blandit. Fusce id lacus eu lorem ullamcorper lacinia. Cras quis lectus id eros luctus ultrices. Quisque sit amet sapien ac leo malesuada ullamcorper.</p>
+    <form class="form">
+      <input type="text" name="name" placeholder="Nom">
+      <input type="email" name="email" placeholder="Email">
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
